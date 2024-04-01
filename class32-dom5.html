@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 5 of DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .focus {
+            background-color: red;
+        }
+
+        .blur {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Information</h2>
+    <!-- <form onsubmit="submit(this)" > -->
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="registration">Registration:</label>
+        <input type="date" id="registration" required><br><br>
+
+        <div id="gender-section">
+            <h3>Gender:</h3>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label> <br><br>
+
+        </div>
+
+
+        <div id="interests-section">
+
+            <h3>Interests:</h3>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label>
+
+            <input type="checkbox" id="travel" name="interests" value="travel">
+            <label for="travel">Travel</label> <br><br>
+
+            <span>world</span>
+            <!-- comment -->world
+        </div>
+
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option>Please select your country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        <!-- <button onclick="addInfo()">Submit</button> -->
+
+        <!-- <button type="submit">Submit</button> -->
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <form name="myForm1">
+        <input type="text" name="username" />
+        <input type="password" name="password" />
+        <input type="email" name="email" />
+    </form>
+
+    <form name="myForm2">
+        <input type="text" name="username" />
+        <input type="password" name="password" />
+    </form>
+
+
+
+    <section class="getElementsByClassName">
+        <div>
+            hello world
+        </div>
+        <h1>hello</h1>
+
+        <p>world</p>
+    </section>
+    <section class="getElementsByClassName">
+        <div>
+            hello world
+        </div>
+        <h1>hello</h1>
+
+        <p>world</p>
+    </section>
+
+    <section class="querySelectorAll">
+        <div>
+            hello world
+        </div>
+        <h1>hello</h1>
+
+        <p>world</p>
+    </section>
+
+    <section class="querySelectorAll">
+        <div>
+            hello world
+        </div>
+        <h1>hello</h1>
+
+        <p>world</p>
+    </section>
+
+    <div id="myDIV" style="background:coral; padding:16px;">
+        <!-- comment  -->
+        <p>First p element (index 1)</p>
+        <p>Second p element (index 3)</p>
+    </div>
+
+    <script src="./js/class32-19.js"></script>
+
+</body>
+
+</html>

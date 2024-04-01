@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 9 of CSS</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      body {
+        scroll-behavior: smooth;
+        /* background-color: rgb(4, 10, 56);
+        opacity: 0.3; */
+        /* OR  */
+        /* background-color: rgba(56, 4, 14, 1); */
+      }
+      body::selection {
+        background-color: green;
+        color: yellow;
+      }
+      div::selection {
+        background-color: red;
+        color: yellow;
+      }
+      input {
+        caret-color: red;
+      }
+      /* combinator selectors */
+      .ul-class .li-class {
+        list-style: url('./assets/images/icons8-favicon-94.png');
+      }
+      /* ul li {
+        list-style: none;
+      } */
+      .transform {
+        /* transform: rotate(45deg); */
+        background-color: red; 
+        /* 1400px - 60px = 1340px */
+        width: calc(100% - 60px);  /* 1340px */
+        /* width: 1700px; */
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 10px solid yellow;
+      }
+
+      [data-input='input'] {
+        /* Attribute has this exact value */
+        background-color: aqua;
+      }
+
+      /* .container{
+        background-color: aqua;
+
+        width: 500px;
+        margin: 10px auto;
+      } */
+      
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    body
+    <div class="container">this is container</div>
+    <div class="transform">heading</div>
+
+    <input type="text" placeholder="Enter your name" data-input="input" />
+    <ul class="ul-class">
+      <li class="li-class">apple</li>
+      <li class="li-class">orange</li>
+    </ul>
+    <ol>
+      <li>apple</li>
+      <li>orange</li>
+    </ol>
+    <footer>Footer</footer>
+
+  </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 6 of HTML and CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      input {
+        accent-color: red;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      /* html {
+        background-color: red;
+      } */
+
+      body {
+        background-color: aqua;
+        /* vh = viewport height  */
+        /* height: 75vh;
+        width: 50vw; */
+      }
+
+      /* h1 {
+        display: none;
+      }
+      h2 {
+        visibility: hidden;
+        background-color: red;
+      } */
+
+      h3 {
+        /* absolute unit */
+        /* font-size: 100px;  */
+
+        /* relative units */
+        font-size: 2em;
+        /* font-size: 2rem; */
+        /* width: 10%; */
+        /* width: 50vw; */
+        /* height: 75vh; */
+        background-color: yellow;
+        /* height: 100px; */
+      }
+      /* section {
+        width: 50vw;
+        background-color: orange;
+      }
+      article {
+        width: 90vw;
+        background-color: yellow;
+      } */
+
+      /* 30px parent size 
+1em = 30px child size
+0.5em = 15px child size 
+1.5em = 45px child size 
+1.75em = 45px child size 1.75em = 1em + 0.75em => 30px + 22.5px = 52.5px */
+      /* div {
+        font-size: 50px;
+      }
+
+      span {
+        font-size: 0.5em;
+      } */
+      /* 1rem = 16px */
+      /* 1rem = 32px */
+
+      html {
+        /* default value  */
+        /* font-size:  16px; */
+        /* font-size: 0px; */
+      }
+
+      div {
+        font-size: 50px;
+      }
+
+      p {
+        /* 24px */
+        font-size: 1.5rem;
+      }
+      /* section {
+        background-color: red;
+      } */
+      .red {
+        background-color: red;
+        /* padding: 1rem;
+        margin: 1rem;
+        border: 10px solid black; */
+      }
+      .yellow {
+        background-color: yellow;
+        /* padding: 1rem;
+        margin: 1rem;
+        border: 10px solid black; */
+      }
+      .green {
+        background-color: green;
+        /* padding: 1rem;
+        margin: 1rem;
+        border: 10px solid black; */
+      }
+      .spacing {
+        padding: 1rem;
+        margin: 1rem;
+        border: 10px solid black;
+        border-radius: 1rem;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      #box1 {
+        background-color: rgb(200, 255, 0);
+        /* width:100px;
+        height:100px;
+        display:inline-block; */
+      }
+      #box2 {
+        background-color: rgb(128, 0, 77);
+        /* width:100px;
+        height:100px;
+        display:inline-block; */
+      }
+      #box3 {
+        background-color: rgb(0, 111, 128);
+        /* width:100px;
+        height:100px;
+        display:inline-block; */
+      }
+
+      .circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: blueviolet;
+        border: 1px solid;
+        text-align: center;
+        line-height: 500px;
+      }
+      textarea{
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      The font-size of the div element is set to 30px.
+
+      <span
+        >The span element inside the div element has a font-size of 0.5em, which
+        equals to 0.5x30 = 15px</span
+      >.
+    </div> -->
+    <!-- <div>
+      The font-size of the div element is set to 30px.
+
+      <p>
+        The span element inside the div element has a font-size of 0.5em, which
+        equals to 0.5x30 = 15px
+      </p>
+      .
+    </div> -->
+
+    <!-- <section style="background-color: red">section 1</section>
+    <section style="background-color: red">section 2</section>
+    <section style="background-color: yellow">section 3</section>
+    <section style="background-color: yellow">section 4</section> -->
+    <section class="red spacing">section 1</section>
+    <section class="red spacing">section 2</section>
+    <section class="yellow spacing">section 3</section>
+    <section class="yellow spacing">section 4</section>
+    <section class="green spacing">section 5</section>
+    <section class="green spacing">section 6</section>
+
+    <div>
+      <span id="box1" class="spacing box">box 1</span>
+      <span id="box2" class="spacing box">box 2</span>
+      <span id="box3" class="spacing box">bpx 3</span>
+    </div>
+
+    <div class="circle">circle</div>
+    <!-- <h3>heading 3</h3> -->
+    <!-- <section>
+      section 1
+      <article>article</article>
+    </section>
+
+    <section>section 2</section> -->
+    <!-- <h1>display none 1</h1>
+    <h2>visibility hidden</h2> -->
+
+    <!-- <h3>
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      display none 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minima, optio quasi incidunt, a commodi, suscipit provident facilis
+      temporibus excepturi consectetur quos ea pariatur architecto aspernatur id
+      libero autem neque doloribus!
+      lorem1000
+    </h3> -->
+    <!-- <input type="checkbox" />
+    <input type="radio" /> -->
+
+    <textarea name="" id="" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+  </body>
+</html>

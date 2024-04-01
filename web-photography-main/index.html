@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "RubikMedium";
+            text-decoration: none !important;
+            color: #fff;
+        }
+
+        @font-face {
+            font-family: "RubikMedium";
+            src: url("assets/fonts/Rubik-Medium.ttf");
+        }
+
+        @font-face {
+            font-family: "RubikBlack";
+            src: url("assets/fonts/Rubik-Black.ttf");
+        }
+
+        @font-face {
+            font-family: "RubikLight";
+            src: url("assets/fonts/Rubik-Light.ttf");
+        }
+
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            position: fixed;
+            width: 100% !important;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        header nav ul,
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            transition: all 1s;
+        }
+
+        header nav ul li a:hover,
+        .blog-content h4 a:hover {
+            color: #f04e3c;
+        }
+
+        a.animate-btn {
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #f04e3c;
+            padding: 1.25rem 3rem;
+            cursor: pointer;
+        }
+
+        #hero-section {
+            background-color: #0E0E0E;
+            height: 100vh;
+        }
+
+        #hero-section #bg-image {
+            background-image: url("https://preview.colorlib.com/theme/myphotography/assets/img/hero/hero_man1.png");
+            height: 100vh;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero-section h1,
+        #how-we-make h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bolder;
+            color: #fff;
+            margin: 3rem 0;
+        }
+
+        #hero-section p {
+            color: #f04e3c;
+            text-transform: uppercase;
+        }
+
+        #content-container div {
+            width: 65%;
+        }
+
+        #how-we-make,
+        #testimonials {
+            background-color: #121212;
+            padding: 10rem 0;
+        }
+
+        #how-we-make #hire {
+            color: #f04e3c;
+            border-bottom: 1px solid #f04e3c;
+            padding-bottom: 0.5rem;
+        }
+
+        #how-we-make p {
+            margin: 0;
+        }
+
+        #experience {
+            font-size: 5.5rem;
+            margin-right: 1rem !important;
+        }
+
+        #services,
+        #take-a-look,
+        #blogs {
+            background-color: #0E0E0E;
+            padding: 10rem 0;
+        }
+
+        .service-card:hover img {
+            transition: all 1s;
+        }
+
+        .service-card .image-container {
+            overflow: hidden;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.5, 1.5);
+        }
+
+        #gallery .row div {
+            padding: 0;
+            position: relative;
+        }
+
+        #gallery .row div .overlay-container {
+            display: none;
+            position: absolute;
+            /* transition: all 1s; */
+        }
+
+        #gallery .row div:hover .overlay-container {
+            display: block;
+            /* transition: all 1s; */
+        }
+
+        #gallery .row div:hover .overlay-container .overlay div {
+            transform: translateY(0);
+        }
+
+        #gallery .row .overlay-container .overlay {
+            display: none;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgba(240, 78, 60, 0.9);
+            opacity: 0.75;
+            /* transition: all 1s; */
+        }
+
+        #gallery .row .overlay-container .overlay div {
+            transform: translateY(20rem);
+            transition: all .4s ease-out 0s;
+        }
+
+        #gallery .row .overlay i {
+            font-size: 1.5rem;
+        }
+
+        #gallery .row .overlay p {
+            margin: 0;
+        }
+
+        #gallery .row .overlay-container,
+        #gallery .row .overlay,
+        #gallery .row img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .award-card {
+            /* width: 75%;
+            margin: 0 auto; */
+            border: 1px solid gray;
+            border-radius: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial h4 {
+            color: #f04e3c;
+        }
+
+        .testimonial .designation {
+            color: #57667c;
+        }
+
+        .blog {
+            position: relative;
+        }
+
+        .blog img {
+            width: 100%;
+            height: 80%;
+        }
+
+        .blog-content {
+            padding: 1.9rem;
+            background-color: #121212;
+            width: 90%;
+            position: absolute;
+            right: 0;
+            bottom: -5rem;
+        }
+
+        .blog-content h4 a {
+            color: #fff;
+            transition: all 1s;
+        }
+
+        footer {
+            background-color: #121212;
+            padding: 10rem 0 5rem;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .row>div>h4 {
+            margin-bottom: 3rem;
+        }
+
+        footer ul li {
+            margin: 1rem 0;
+        }
+
+        footer ul li a {
+            color: #868c98;
+            transition: all 1s;
+            font-family: RubikLight;
+        }
+
+        footer ul li a:hover {
+            color: #f04e3c;
+            margin-left: 0.5rem;
+        }
+
+        footer .copy-right {
+            margin-top: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer .copy-right p i,
+        footer .copy-right p span {
+            color: #f04e3c;
+        }
+
+        footer .icons i,
+        footer p {
+            color: #848493;
+        }
+
+        footer .icons span {
+            position: relative;
+        }
+
+        footer .icons span::after {
+            content: "";
+            width: 2rem;
+            height: 2px;
+            background-color: #57667c;
+            right: -38px;
+            position: absolute;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header  -->
+    <header class="container">
+        <div>
+            <img src="https://preview.colorlib.com/theme/myphotography/assets/img/logo/logo.png" alt="Photography">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="/contact.html" class="animate-btn">
+                Contact Us </a>
+        </nav>
+    </header>
+    <!-- hero -->
+    <section id="hero-section">
+        <div class="row w-100">
+            <div class="col-6 d-flex justify-content-center align-items-center" id="content-container">
+                <div>
+                    <p class="m-0">Creative Photography</p>
+                    <h1>Photography Make us happy Take a shot.</h1>
+                    <a href="#" class="animate-btn">Watch Portfolio </a>
+                </div>
+            </div>
+            <div class="col-6 p-0">
+                <div id="bg-image"></div>
+            </div>
+        </div>
+    </section>
+    <!-- how we make  -->
+    <section id="how-we-make">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 ml-5">
+                    <div>
+                        <h1>HOW WE MAKE USER EXPERIENCES</h1>
+                        <a href="#" id="hire"> hire@colorlib.com </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="w-75">You can’t use up creativity. The more you use, the more you have in your signifant
+                        mind.</p>
+
+                    <div class="my-4">
+                        <p>SALVADOR DALI</p>
+                        <p>Digital Artisit</p>
+                    </div>
+                    <div class="d-flex align-items-center w-50">
+                        <p id="experience">05</p>
+                        <p>YEARS OF
+                            DIGITAL EXPERIENCE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="service-card">
+                        <div class="image-container">
+                            <a href="#"> <img class="w-100"
+                                    src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog01.png"
+                                    alt=""></a>
+                        </div>
+                        <h3 class="my-3">Creative Photography</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog02.png"
+                                alt="">
+                        </div>
+                        <!-- <a href="#"> -->
+                        <h3 class="my-3">Creative Photography</h3>
+                        <!-- </a> -->
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a href="#">
+                        <div class="service-card">
+                            <div class="image-container">
+                                <img class="w-100"
+                                    src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog03.png"
+                                    alt="">
+                            </div>
+                            <h3 class="my-3">Creative Photography</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+    </section>
+    <!-- gallery  -->
+    <section id="gallery">
+
+        <div class="row w-100">
+            <div class="col-5">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery1.png.webp" alt="">
+            </div>
+            <div class="col-3">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery2.png.webp" alt="">
+            </div>
+            <div class="col-4">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery3.png.webp" alt="">
+            </div>
+            <div class="col-5">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery4.png.webp" alt="">
+            </div>
+            <div class="col-4">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery5.png.webp" alt="">
+            </div>
+            <div class="col-3">
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <i class="fa-solid fa-maximize"></i>
+                        <div>
+                            <h3>The Last man</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/gallery6.png.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- take a look  -->
+    <section id="take-a-look">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex flex-column w-75">
+                        <h1 class="m-0">TAKE A LOOK AT OUR ACHIVMENT</h1>
+                        <p class="mt-4">Excepteur sint occaecat cupidatat. irure dolor in.</p>
+                        <div class="mt-4"><a href="#" class="animate-btn mt-3"> Get Start </a></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="award-card">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/brand1.png"
+                            alt="">
+                        <div class="mt-4 text-center">
+                            <p class="m-0">BEHANCE AWARD</p>
+                            <p class="m-0">PRIZE 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="testimonial d-flex flex-column justify-content-center align-items-center">
+                <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/testimonial.png" alt="">
+                <p class="w-50 mx-auto my-5">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Quis
+                    ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por
+                    incididunt ut labore et dolore mas. </p>
+                <div class="d-flex align-items-center gap-3">
+                    <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/Homepage_testi.png"
+                        alt="">
+                    <div>
+                        <h4 class="m-0">Jessya Inn</h4>
+                        <p class="m-0 designation">Chif Photographer</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- blog  -->
+    <section id="blogs">
+        <div class="container">
+            <div class="text-center">
+                <h1>TOURIST BLOG</h1>
+                <p>Our Recent Photos</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="blog">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog1.png" alt="">
+                        <div class="blog-content">
+                            <p>23 DEC, 2020</p>
+                            <h4><a href="#">Addiction When Gambling Becomes</a></h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="blog">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog2.png" alt="">
+                        <div class="blog-content">
+                            <p>23 DEC, 2020</p>
+                            <h4><a href="#">Addiction When Gambling Becomes</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="blog">
+                        <img src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/blog3.png" alt="">
+                        <div class="blog-content">
+                            <p>23 DEC, 2020</p>
+                            <h4><a href="#">Addiction When Gambling Becomes</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer  -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href=""><img
+                            src="https://preview.colorlib.com/theme/myphotography/assets/img/logo/logo2_footer.png"
+                            alt=""></a>
+
+                    <p class="mt-4 w-75">Grabbing the concsumer’s attention isn’t enough you have to keep that attention
+                        for at least a.
+                    </p>
+                </div>
+                <div class="col-2">
+                    <h4>NAVIGATION</h4>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>USEFUL LINKS</h4>
+                    <ul>
+                        <li><a href="">Registration</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Registration</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Registration</a></li>
+                        <li><a href="">Login</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h4>INSTAGRAM FEED</h4>
+                    <div class="row g-3">
+                        <div class="col-4"><img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram1.png"
+                                alt=""></div>
+                        <div class="col-4">
+                            <img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram2.png"
+                                alt="">
+                        </div>
+                        <div class="col-4"><img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram3.png"
+                                alt=""></div>
+                        <div class="col-4">
+                            <img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram4.png"
+                                alt="">
+                        </div>
+                        <div class="col-4"><img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram5.png"
+                                alt=""></div>
+                        <div class="col-4">
+                            <img class="w-100"
+                                src="https://preview.colorlib.com/theme/myphotography/assets/img/gallery/instagram6.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <p class="m-0">Copyright ©2024 All rights reserved | This template is made with <i
+                        class="fa-solid fa-heart"></i> by
+                    <span>Colorlib</span>
+                </p>
+                <div class="icons d-flex align-items-center gap-5">
+                    <span>Follow Us</span>
+                    <div class="d-flex gap-3">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

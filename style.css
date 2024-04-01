@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('./style1.css');
+
+h1,
+h4,
+span,
+p {
+  font-size: 80px;
+  color: green;
+  background-color: rgb(196, 84, 15);
+  text-align: center;
+}

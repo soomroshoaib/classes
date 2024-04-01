@@ -1,0 +1,7 @@
+.container{
+    background-color: aqua;
+    width: 100%;
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 10px;
+}

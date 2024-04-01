@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 24</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/dist/faker.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js" referrerpolicy="no-referrer"></script> -->
+    <script>
+        console.log(faker.name.firstName());
+        const posts = [];
+        function generateRandomPost(numberOfPosts = 1000) {
+            for (let index = 0; index < numberOfPosts; index++) {
+                // console.log(faker.lorem.lines());
+                // console.log(faker.image.abstract(1234, 2345, true) );
+                // console.log(faker.image.urlLoremFlickr({ category: 'nature', height: 1080, width: 1920 }));
+                const post = {
+                    id: index + 1,
+                    title: faker.lorem.lines(1), description: faker.lorem.lines(50),
+                    image: faker.image.imageUrl(1920, 1080, "nature")
+                    // image: faker.image.urlLoremFlickr({ category: 'nature', height: 1080, width: 1920 })
+                }
+                posts.push(post)
+            }
+
+            return posts;
+        }
+
+        console.log(generateRandomPost());
+    </script>
+</body>
+
+</html>

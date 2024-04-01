@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations and Transitions</title>
+    <style>
+      /* transitions  */
+      #transition {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in;
+        transition-delay: 1s; */
+        /* transition: transition-property transition-duration transition-timing-function transition-delay; */
+        /* transition: all 2s linear 1s; */
+        transition: width 2s, height 4s;
+      }
+
+      #transition:hover {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        border-radius: 20px;
+      }
+
+      /* animations  */
+      #animation {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-direction: reverse; */
+        animation-fill-mode: backwards;
+
+        /* animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; */
+
+        /* OR  */
+
+        /* animation: example 5s linear 2s infinite alternate; */
+      }
+
+      /* @keyframes example {
+        from {
+          background-color: green;
+          width: 200px;
+          height: 200px;
+        }
+        to {
+          background-color: yellow;
+          width: 400px;
+          height: 400px;
+        }
+      } */
+      @keyframes example {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="transition"></div>
+    <div id="animation"></div>
+  </body>
+</html>

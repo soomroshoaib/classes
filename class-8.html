@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 8 of CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .transform {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* transform: scale(1,2); */
+        /* transform: rotate(45deg); */
+        transform: rotateX(45deg);
+        transform: translate(20px,10px);
+        
+      }
+      
+      h1 {
+        text-shadow: 1px 1px 5px red;
+      }
+      /* div {
+          box-shadow: 1px 1px 5px 2px gray;
+        } */
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+      #table1 {
+        /* border-collapse: collapse; */
+        border-collapse: separate;
+        border-spacing: 15px;
+      }
+
+      .pre {
+        white-space: pre;
+      }
+      .aspect {
+        width: 400px;
+        aspect-ratio: 16/9;
+        background-color: red;
+      }
+    
+      img{
+        width: 100px;
+        height: 100px;
+      }
+      img:hover{
+        transform: scale(2,2);
+        transform: translate(20px,10px);
+      }
+
+      /* @media screen and (max-width: 600px) and (min-width: 400px){
+          body{
+              background-color: yellow;
+          }
+      } */
+      /* @media screen and (600px <= width <= 400px) {
+          body{
+              background-color: yellow;
+          }
+      } */
+    </style>
+  </head>
+  <body>
+    <img src="./assets/images/pexels-valentin-angel-fernandez-15131949.jpg" alt="">
+    <!-- <h1>Heading</h1>
+    <div>this is my div</div>
+    <table id="table1">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+      </tr>
+    </table>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nemo libero non quos esse nam doloremque alias pariatur aspernatur suscipit delectus necessitatibus deleniti quasi accusamus, animi dicta optio corrupti tempora!</p>
+    <p class="pre">
+        Hello greppers,    ankur
+        here hope you   all
+        are enjoying        the 
+        coding.
+        </p> -->
+
+    <!-- <div class="aspect">Aspect ratio</div> -->
+
+    <div class="transform">div</div>
+  </body>
+</html>

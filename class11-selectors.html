@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 11 of CSS Selectors</title>
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ._container {
+        background-color: aqua;
+        border: 5px solid red;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        /* justify-content: start; */
+        /* This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap. */
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+
+        /* flex-flow: flex-direction flex-wrap; */
+        /* flex-flow: row nowrap; */
+        /* flex-flow: column wrap; */
+        /* gap: 20px 40px; */
+        row-gap: 20px;
+        column-gap: 40px;
+      }
+      .box {
+        /* width: 100px; */
+        height: 100px;
+        background-color: yellow;
+        border: 2px solid green;
+        /* margin: 20px; */
+      }
+      .box {
+        flex-grow: 1;
+      }
+      #box6 {
+        flex-grow: 3;
+      }
+      /* #box1 {
+          order: 2;
+        }
+        #box2 {
+          order: 1;
+        }
+        #box3 {
+          order: 4;
+        }
+        #box4 {
+          order: 3;
+        } */
+      .box:nth-child(3n-2) {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container px-4 text-center">
+      <div class="row gx-5">
+        <div class="col">
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col">
+          <div class="p-3">Custom column padding</div>
+        </div>
+      </div>
+    </div> -->
+    <h1>hello world</h1>
+    <!-- <div class="container-fluid">
+        text
+    </div> -->
+    <div class="container text-center">
+       <div class="row">
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <div class="col-4">Column 1</div>
+        <!-- <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div>
+        <div class="col">Column 1</div> -->
+       </div>
+      </div>
+    <!-- <form>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Example textarea</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </form> -->
+    <!-- Button trigger modal -->
+    <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="_container">
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
+      <div class="box" id="box5">Box 5</div>
+      <div class="box" id="box6">Box 5</div>
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
+      <div class="box" id="box5">Box 5</div>
+      <div class="box" id="box6">Box 5</div>
+    </div> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="./assets/js/bootstrap.js"></script> -->
+  </body>
+</html>

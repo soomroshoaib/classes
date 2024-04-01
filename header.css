@@ -1,0 +1,15 @@
+:root {
+  --primary: red;
+  --secondary: rgb(30, 50, 60);
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --border: 20px solid var(--blue);
+  --font: 'Courier New', Courier, monospace
+}
+
+header {
+  background-color: var(--primary);
+  /* border: 20px solid var(--primary); */
+  border: var(--border);
+  font-family: var(--font);
+}

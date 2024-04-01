@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 10 of CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* div, */
+      #cover {
+        background-color: red;
+        width: 100%;
+        height: 50vh;
+        background-image: url('./assets/images/pexels-valentin-angel-fernandez-15131949.jpg');
+        /* background-image: url('./assets/images/icons8-favicon-94.png'); */
+        background-repeat: no-repeat;
+        /* background-position: top right; */
+        /* background-size: 500px 300px; */
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      #contain {
+        background-color: red;
+        width: 100%;
+        height: 50vh;
+        background-image: url('./assets/images/pexels-valentin-angel-fernandez-15131949.jpg');
+        /* background-image: url('./assets/images/icons8-favicon-94.png'); */
+        background-repeat: no-repeat;
+        /* background-position: top right; */
+        /* background-size: 500px 300px; */
+        background-size: contain;
+      }
+      #clip {
+        display: flex;
+      }
+      #clip img {
+        width: 500px;
+        height: 500px;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        shape-outside: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+     
+    </style>
+  </head>
+  <body>
+    <!-- <div id="cover"></div>
+    <div id="contain"></div> -->
+    <div id="clip">
+      <img
+        src="./assets/images/pexels-valentin-angel-fernandez-15131949.jpg"
+        alt=""
+      />
+      <!-- <div>
+        <h1></h1>
+      </div> -->
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta velit
+        beatae aut, fuga perferendis fugiat iusto ipsam quas autem explicabo,
+        quis maiores libero dolores, eum ratione aspernatur qui. Dolor aliquid
+        commodi beatae nam ratione reprehenderit porro, veritatis eligendi eaque
+        rerum esse numquam repellat sequi obcaecati? Velit magnam animi
+        laboriosam eligendi, officia placeat? Dolores accusantium possimus optio
+        ducimus consequatur eveniet perspiciatis molestias laudantium iusto nisi
+        amet assumenda pariatur consectetur voluptatibus incidunt ipsum iure ut
+        tenetur enim, magni tempore. Iste laudantium rem eum distinctio
+        provident eius natus praesentium saepe harum? Quasi sit impedit
+        doloribus tenetur asperiores praesentium ullam molestias quidem,
+        voluptate, inventore cum? Quo exercitationem distinctio quibusdam
+        asperiores ad accusamus incidunt non debitis! Delectus nesciunt esse
+        suscipit dolor in fugiat error, dolores sed cupiditate dignissimos
+        reiciendis soluta a earum porro asperiores recusandae odit sapiente
+        dolorem libero maxime doloribus optio deleniti hic dolore. Explicabo
+        magnam, sint veniam sunt sed ducimus beatae cumque ad quod quasi commodi
+        autem dolor consectetur asperiores quae. Nemo earum blanditiis tempora
+        libero porro temporibus at repellendus. Quaerat officiis similique
+        explicabo eaque eum excepturi doloremque rem itaque qui dolor dicta
+        ratione, tenetur aut beatae laudantium harum ab perspiciatis minus sequi
+        debitis maxime quibusdam molestiae, deleniti fuga. Dignissimos
+        necessitatibus, magni inventore quaerat eaque similique, iure quis
+        maxime laborum perspiciatis sed minima dicta, deleniti aut cupiditate
+        sint aliquam exercitationem nobis quo nostrum! Expedita, laboriosam
+        reprehenderit quae doloribus delectus itaque soluta ullam error
+        voluptatum iste labore voluptatem vero provident, quidem a ab placeat
+        voluptates quisquam corporis. Nisi assumenda tenetur maiores!
+        Accusantium facere totam, aliquid necessitatibus voluptas obcaecati
+        maiores expedita laboriosam eum tempore perferendis nesciunt minus
+        voluptatibus! Nemo doloribus fugit voluptatibus, dolor voluptates
+        possimus dolores architecto, rerum laudantium ullam autem qui odit ab
+        nobis. Perspiciatis necessitatibus ex odit vero distinctio repellat qui,
+        molestiae atque ullam id ipsa dolorum fugiat perferendis aperiam cum
+        fugit incidunt tempore dolor reiciendis sunt. Voluptas optio nisi culpa
+        fugit doloribus dignissimos, quidem magnam mollitia tenetur quis eaque,
+        cumque eos officia. Culpa illo rem quisquam sunt molestias corrupti
+        nostrum consequuntur in dolorem sed voluptatibus nam tempora eius cumque
+        nesciunt iusto ad ipsa qui, beatae, odit enim? Pariatur quia ea unde
+        modi et nulla debitis sapiente cumque, deleniti aperiam quisquam dolore
+        dignissimos. Amet ea, blanditiis minima veritatis reprehenderit nihil
+        voluptas vel! Deleniti autem mollitia doloremque possimus itaque nostrum
+        magni est illo neque, et perspiciatis vitae, obcaecati iste tenetur.
+        Error neque reiciendis accusamus officia praesentium! Rem corrupti magni
+        molestiae, eligendi ab adipisci cupiditate beatae, quos excepturi
+        voluptate incidunt in tempora, labore itaque nesciunt dolor libero non
+        dignissimos amet. Minus alias quam hic ipsam labore odit velit itaque
+        maiores ea? Fugit officiis facere, obcaecati doloremque mollitia illo
+        iure labore recusandae magni deleniti maiores corrupti deserunt
+        corporis, quos laboriosam sapiente ratione consequatur distinctio
+        suscipit reprehenderit. Blanditiis harum minus eveniet explicabo
+        inventore porro doloremque neque consequatur. Dicta expedita incidunt
+        soluta sequi harum recusandae laudantium, impedit at, maiores, laborum
+        adipisci pariatur commodi temporibus voluptatem reiciendis veniam nemo
+        tempora numquam accusamus dolore architecto officiis! Iste assumenda
+        impedit ratione amet? Nam quisquam voluptatibus architecto minima? Iste
+        dignissimos ipsam suscipit!
+      </p>
+    </div>
+  </body>
+</html>
